@@ -8,11 +8,11 @@ layout: default
     <h2>Najlepsze teksty twoich ulubionych YouTuberów w&nbsp;jednym&nbsp;miejscu.</h2>
     <a class="google_play_badge" href="https://play.google.com/store/apps/details?id=pl.tekstyztuby">
       <img alt="Pobierz z Google Play"
-           src="/images/pobierz_z_google_play.png" />
+           src="/tzt_backend/images/pobierz_z_google_play.png" />
     </a>
   </div>
   <div class="right-section">
-    <img src="/images/phone_image.png" alt="" usemap="#phone_map">
+    <img src="/tzt_backend/images/phone_image.png" alt="" usemap="#phone_map">
     <map name="phone_map">
       {% for i in (0..5) %}
         {% capture j %}{{ i | plus:1 }}{% endcapture %}
@@ -37,11 +37,11 @@ layout: default
 </style>
 
 <script type="text/javascript">
-  var audio = new Audio("/pages/home/demo_creation_0.mp3");
+  var audio = new Audio("/tzt_backend/pages/home/demo_creation_0.mp3");
   $("[name='phone_map'] > area").click(function(e) {
     e.preventDefault();
     audio.pause();
-    audio = new Audio("/pages/home/"+$(this).data("audio-id")+".mp3");
+    audio = new Audio("/tzt_backend/pages/home/"+$(this).data("audio-id")+".mp3");
     audio.play();
   })
 </script>
