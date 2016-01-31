@@ -4,13 +4,14 @@
   <title>{% if page.title %}{{ page.title }} - {% endif %}Teksty Z Tuby</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-  
   <meta charset="utf-8" />
   <meta name="description" content="Najlepsze teksty twoich ulubionych YouTuberów w jednym miejscu." />
   <link rel="stylesheet" media="all" href="/tzt_backend/css/main.css">
   <link rel="stylesheet" media="all" href="/tzt_backend/css/pages.css">
-  <script src="js.js"></script>
+  <script src="/tzt_backend/js.js"></script>
+
+  {% include app_tags.html %}
+  {% include fb_tags.html %}
 
 </head>
 <body>
@@ -36,7 +37,7 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/tzt_backend/">
         <span><img src="/tzt_backend/logo.png" width="32" height="32" style="margin: -6px 0px 0 -6px"></span>
         <span style="margin-left: 8px">Teksty Z Tuby</span>
       </a>
