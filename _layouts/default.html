@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}Teksty Z Tuby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  
+  <meta charset="utf-8" />
+  <meta name="description" content="Najlepsze teksty twoich ulubionych YouTuberów w jednym miejscu." />
+  <link rel="stylesheet" media="all" href="css/main.css">
+  <link rel="stylesheet" media="all" href="css/pages.css">
+  <script src="js.js"></script>
+
+</head>
+<body>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1565720763674560',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/pl_PL/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span><img src="/logo.png" width="32" height="32" style="margin: -6px 0px 0 -6px"></span>
+        <span style="margin-left: 8px">Teksty Z Tuby</span>
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+    </ul>
+</nav>
+
+<div class="container">
+
+  {{ content }}
+
+</div>
+
+</body>
+</html>
